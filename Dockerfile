@@ -18,8 +18,8 @@ COPY --from=build /picoGW_hal/util_boot ./util_boot
 COPY --from=build /picoGW_hal/util_chip_id ./util_chip_id
 COPY --from=build /picoGW_packet_forwarder/lora_pkt_fwd ./lora_pkt_fwd
 
-WORKDIR /gateway
+WORKDIR /gateway/lora_pkt_fwd
 
 EXPOSE 1680/udp
 
-CMD ["./lora_pkt_fwd/lora_pkt_fwd"]
+CMD ["./lora_pkt_fwd"]
