@@ -22,4 +22,4 @@ WORKDIR /gateway
 
 EXPOSE 1680/udp
 
-CMD ["./lora_pkt_fwd/lora_pkt_fwd -d /dev/ttyACM0"]
+CMD ["./lora_pkt_fwd/lora_pkt_fwd"]
