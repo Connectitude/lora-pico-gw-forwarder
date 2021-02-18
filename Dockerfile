@@ -1,7 +1,7 @@
 FROM buildpack-deps:buster as build
 
-RUN git clone https://github.com/Lora-net/picoGW_hal.git && \
-    git clone https://github.com/Lora-net/picoGW_packet_forwarder.git && \
+RUN git clone -b master https://github.com/Lora-net/picoGW_hal.git && \
+    git clone -b master https://github.com/Lora-net/picoGW_packet_forwarder.git && \
     cd /picoGW_hal && make clean all && \
     cd /picoGW_packet_forwarder && make clean all
 
