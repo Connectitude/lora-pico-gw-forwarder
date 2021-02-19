@@ -6,4 +6,5 @@ Based on the following repositories
 
 Start the pico-gateway container by passing the config file (global_conf.json) and the serial device (ex: /dev/ttyACM0)
 
-    docker run -v $PWD/global_conf.json:/gateway/picoGW_packet_forwarder/lora_pkt_fwd/global_conf.json:ro --device=/dev/ttyACM0 -p 1680:1680/udp connectitude/lora-pico-gw-forwarder
+    docker run -v $PWD/data:/gateway/lora_pkt_fwd/data --device=/dev/ttyACM0 -p 1680:1680/udp connectitude/lora-pico-gw-forwarder:<version>
+    docker run -v $PWD/data:/gateway/lora_pkt_fwd/data --device=/dev/ttyACM0 --network host connectitude/lora-pico-gw-forwarder:<version>
