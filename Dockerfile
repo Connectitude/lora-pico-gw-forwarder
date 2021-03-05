@@ -26,7 +26,7 @@ COPY --from=build /picoGW_hal/util_chip_id ./util_chip_id
 COPY --from=build /picoGW_packet_forwarder/lora_pkt_fwd ./lora_pkt_fwd
 
 COPY start.sh ./lora_pkt_fwd/start.sh
-RUN chmod +x /start.sh
+RUN chmod +x ./lora_pkt_fwd/start.sh
 
 WORKDIR /gateway/lora_pkt_fwd
 
