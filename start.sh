@@ -1,9 +1,13 @@
 #!/bin/sh
 
+sleep 15
+timeout -t 10 ../util_chip_id/util_chip_id || exit 1
+sleep 15
+
 if [[ ! -f "data/local_conf.json" ]]; then
     gatewayIdStatus=1
     while [ $gatewayIdStatus -gt 0 ]
-    do
+    do        
         gatewayId=$("../util_chip_id/util_chip_id")
         echo $gatewayId
 
@@ -18,7 +22,7 @@ __EOM__
             gatewayIdStatus=0
         fi
 
-        sleep 5
+        sleep 15
     done
 fi
 
