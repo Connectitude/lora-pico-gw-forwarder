@@ -2,7 +2,7 @@
 
 sleep 15
 timeout -t 10 ../util_chip_id/util_chip_id || exit 1
-sleep 15
+sleep 30
 
 if [[ ! -f "data/local_conf.json" ]]; then
     gatewayIdStatus=1
